@@ -108,3 +108,7 @@ GPU UUID:       GPU-80c3d33f-307f-14cd-cc53-9ad31cf49d73
 Bus Location:   00000000:01:00.0
 Architecture:   6.1
 ```
+
+# エラーが出てしまったら。。。
+この辺を参照。
+- https://qiita.com/aokomoriuta/items/d59b54c14ea473f2a1c3
