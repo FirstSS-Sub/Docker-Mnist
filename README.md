@@ -111,4 +111,5 @@ Architecture:   6.1
 
 # エラーが出てしまったら。。。
 この辺を参照。
+- https://blog.tizen.moe/entry/2016/02/13/202938
 - https://qiita.com/aokomoriuta/items/d59b54c14ea473f2a1c3
