@@ -1,4 +1,4 @@
-# Docker-Mnist
+# 調整中
 
 # DockerでKerasを使ったディープラーニングの環境を構築する
 今回はLinuxで動作させることを想定しています。  
@@ -113,3 +113,4 @@ Architecture:   6.1
 この辺を参照。
 - https://blog.tizen.moe/entry/2016/02/13/202938
 - https://qiita.com/aokomoriuta/items/d59b54c14ea473f2a1c3
+- https://qiita.com/uni-3/items/c9480d7e177e29b1316c
