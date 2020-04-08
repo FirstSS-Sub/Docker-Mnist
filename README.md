@@ -119,7 +119,7 @@ docker build [ -t ｛イメージ名｝ [ :｛タグ名｝ ] ] ｛Dockerfileの�
 という書式になっている。  
 
 ```
-docker run --rm -it mnist
+docker run --gpus all -it mnist --rm nvidia/cuda nvidia-smi
 ```  
 で起動。
 
