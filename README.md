@@ -109,8 +109,24 @@ Bus Location:   00000000:01:00.0
 Architecture:   6.1
 ```
 
+## 実行
+このgithubレポジトリをcloneして、Docker-mnistファイル下に移動。  
+```
+docker build -t mnist .
+```  
+でコンテナのビルドとイメージの作成。ちなみに、  
+docker build [ -t ｛イメージ名｝ [ :｛タグ名｝ ] ] ｛Dockerfileのあるディレクトリ｝  
+という書式になっている。  
+
+```
+docker run --rm -it mnist
+```  
+で起動。
+
 # エラーが出てしまったら。。。
 この辺を参照。
 - https://blog.tizen.moe/entry/2016/02/13/202938
 - https://qiita.com/aokomoriuta/items/d59b54c14ea473f2a1c3
 - https://qiita.com/uni-3/items/c9480d7e177e29b1316c
+- https://pypi.org/project/tensorflow-gpu/
+- https://www.tensorflow.org/install/source#common_installation_problems
