@@ -130,3 +130,4 @@ docker run --gpus all -it mnist --rm nvidia/cuda nvidia-smi
 - https://qiita.com/uni-3/items/c9480d7e177e29b1316c
 - https://pypi.org/project/tensorflow-gpu/
 - https://www.tensorflow.org/install/source#common_installation_problems
+- https://qiita.com/DQNEO/items/da5df074c48b012152ee
