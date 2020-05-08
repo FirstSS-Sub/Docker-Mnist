@@ -119,9 +119,11 @@ docker build [ -t ｛イメージ名｝ [ :｛タグ名｝ ] ] ｛Dockerfileの�
 という書式になっている。  
 
 ```
-docker run --gpus all -it mnist --rm nvidia/cuda nvidia-smi
+docker run --runtime=nvidia --rm -it mnist
 ```  
 で起動。
+  
+動作中に別の端末（ターミナル）で`nvidia-smi`コマンドでGPUが動いていることを確認できる。はず。
 
 # エラーが出てしまったら。。。
 この辺を参照。
