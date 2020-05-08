@@ -85,10 +85,8 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$(. /etc/os-release;echo $ID$V
 sudo apt update
 ```  
   
-~~ツールキットをインストールする。~~
-```
-~~sudo apt -y install nvidia-container-toolkit~~
-```  
+~~ツールキットをインストールする。 sudo apt -y install nvidia-container-toolkit~~
+  
   
 Nvidia-Dockerをインストールする
 ```
