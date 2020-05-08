@@ -1,8 +1,7 @@
 FROM nvidia/cuda:9.0-cudnn7-runtime
 
-RUN pip install --upgrade pip
-
 RUN apt update && apt install -y python3-pip
+RUN pip3 install --upgrade pip
 RUN pip3 install tensorflow-gpu keras
 
 RUN apt install -y wget
