@@ -11,6 +11,7 @@ RUN bash Anaconda3-5.0.1-Linux-x86_64.sh -b
 ENV PATH $PATH:/root/anaconda3/bin
 
 # conda install
+RUN conda create -n conda_mnist python=3.6.5 anaconda
 RUN pip install tensorflow-gpu==1.12.0
 RUN pip install keras
 
