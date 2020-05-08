@@ -85,10 +85,16 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$(. /etc/os-release;echo $ID$V
 sudo apt update
 ```  
   
-ツールキットをインストールする。
+~~ツールキットをインストールする。~~
 ```
-sudo apt -y install nvidia-container-toolkit
+~~sudo apt -y install nvidia-container-toolkit~~
 ```  
+  
+Nvidia-Dockerをインストールする
+```
+sudo apt-get install nvidia-docker2
+sudo pkill -SIGHUP dockerd
+```
   
 一旦再起動する。
 ```
@@ -109,7 +115,27 @@ Bus Location:   00000000:01:00.0
 Architecture:   6.1
 ```
 
-## 実行
+## 実行準備
+まずはDocker Hubのアカウントを作成します。UsernameとPasswordはこのあと使用するので忘れずに控えてください。  
+https://hub.docker.com/
+  
+
+```
+docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
+```  
+  
+としてみるとGPUの使用状況が確認できます。
+  
+```
+sudo systemctl restart docker
+```
+でデーモンを再起動。
+
+で起動。
+  
+動作中に別の端末（ターミナル）で`nvidia-smi`コマンドでGPUが動いていることを確認できる。はず。
+
+## 実行準備
 このgithubレポジトリをcloneして、Docker-mnistファイル下に移動。  
 ```
 docker build -t mnist .
@@ -120,10 +146,9 @@ docker build [ -t ｛イメージ名｝ [ :｛タグ名｝ ] ] ｛Dockerfileの�
 
 ```
 docker run --runtime=nvidia --rm -it mnist
-```  
-で起動。
+```
   
-動作中に別の端末（ターミナル）で`nvidia-smi`コマンドでGPUが動いていることを確認できる。はず。
+で起動。
 
 # エラーが出てしまったら。。。
 この辺を参照。
