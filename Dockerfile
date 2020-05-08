@@ -1,3 +1,4 @@
+# 2020/05/08 Updated.
 FROM nvidia/cuda:9.0-cudnn7-runtime
 
 RUN apt update && apt install -y python3-pip

@@ -118,6 +118,15 @@ Architecture:   6.1
 https://hub.docker.com/
   
 
+次に端末（ターミナル）で
+  
+```
+docker login
+```
+  
+とコマンドしてUsernameとPasswordを入力してログインします。
+  
+
 ```
 docker run --runtime=nvidia --rm nvidia/cuda:9.0-base nvidia-smi
 ```  
