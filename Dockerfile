@@ -1,21 +1,9 @@
-FROM nvidia/cuda:9.0-cudnn7-devel
+FROM nvidia/cuda:9.0-cudnn7-runtime
 
-# apt
-RUN apt update
-RUN apt install -y bzip2 wget git
+RUN apt update && apt install -y python3-pip
+RUN pip3 install tensorflow-gpu keras
 
-# install Anaconda3
-RUN wget -q https://repo.continuum.io/archive/Anaconda3-5.0.1-Linux-x86_64.sh
-RUN touch .bashrc
-RUN bash Anaconda3-5.0.1-Linux-x86_64.sh -b
-ENV PATH $PATH:/root/anaconda3/bin
-
-# conda install
-RUN conda create -n conda_mnist python=3.6.5 anaconda
-RUN pip install tensorflow-gpu==1.12.0
-RUN pip install keras
-
-# install mnist_sample
+RUN apt install -y wget
 RUN wget https://raw.githubusercontent.com/fchollet/keras/master/examples/mnist_cnn.py
 
-CMD ["python", "/mnist_cnn.py"]
+CMD ["python3", "/mnist_cnn.py"]
