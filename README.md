@@ -131,11 +131,7 @@ sudo systemctl restart docker
 ```
 でデーモンを再起動。
 
-で起動。
-  
-動作中に別の端末（ターミナル）で`nvidia-smi`コマンドでGPUが動いていることを確認できる。はず。
-
-## 実行準備
+## 実行
 このgithubレポジトリをcloneして、Docker-mnistファイル下に移動。  
 ```
 docker build -t mnist .
@@ -149,6 +145,8 @@ docker run --runtime=nvidia --rm -it mnist
 ```
   
 で起動。
+  
+動作中に別の端末（ターミナル）で`nvidia-smi`コマンドでGPUが動いていることを確認できる。はず。
 
 # エラーが出てしまったら。。。
 この辺を参照。
