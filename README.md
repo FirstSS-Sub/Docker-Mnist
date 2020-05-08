@@ -155,6 +155,9 @@ docker run --runtime=nvidia --rm -it mnist
   
 動作中に別の端末（ターミナル）で`nvidia-smi`コマンドでGPUが動いていることを確認できる。はず。
 
+## 次からは...
+一度この手順を踏めば、次からは**実行**の欄だけコマンドを打ってもらえれば出来る。はず。
+
 # エラーが出てしまったら。。。
 この辺を参照。
 - https://blog.tizen.moe/entry/2016/02/13/202938
@@ -163,3 +166,4 @@ docker run --runtime=nvidia --rm -it mnist
 - https://pypi.org/project/tensorflow-gpu/
 - https://www.tensorflow.org/install/source#common_installation_problems
 - https://qiita.com/DQNEO/items/da5df074c48b012152ee
+- https://qiita.com/gen10nal/items/1e7fe8a1b2e9ad1e7919
